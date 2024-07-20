@@ -1,0 +1,131 @@
+.project {
+  text-align: center;
+  background: linear-gradient(to bottom, #3e233e, #232020);
+  padding-top: 5%;
+  padding: 5rem;
+}
+
+.project__container {
+  text-align: center;
+  width: 100%;
+  height: 80%;
+}
+
+.project__buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.project__buttons button {
+  padding: 10px 30px;
+  cursor: pointer;
+  background: none;
+  background-color: #5a2383;
+  border: 2px solid #301e5f;
+  font-weight: 700;
+  color: aliceblue;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+}
+#dec{
+  text-align: -webkit-auto;
+  font-size: 13px;
+}
+.card {
+  flex: 0 1 calc(25% - 20px); 
+  max-width: 300px; 
+  border: 1px solid #8213c2;
+  background-color: black;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+}
+
+.first_button {
+  border-radius: 40% 0 0 0;
+}
+
+.last_button {
+  border-radius: 0 0 40% 0;
+}
+h2{
+  padding-top: 1rem;
+}
+.project-key{
+  font-family: cursive;
+  padding: 0 2%;
+  border-radius: 10px;
+  color: #d99c16;
+}
+button:focus {
+  outline: none;
+  border-color: aliceblue;
+  background: none;
+}
+
+@media (max-width: 1189px) {
+  #dec{
+    text-align: -webkit-auto;
+    font-size: 10px;
+    padding-bottom: 3%;
+  }
+  .card {
+    flex-basis: calc(30% - 25px);  
+  }
+}
+
+@media (max-width: 950px) {
+  .card {
+    flex-basis: calc(35% - 25px);  
+  }
+  .project-cards{
+    gap: 50px;
+  }
+}
+
+
+@media (max-width: 860px) {
+  .project {
+    padding: 1rem;
+  }
+
+  .project__buttons button {
+    padding: 10px 28px;
+  }
+
+  .card {
+    flex-basis: calc(35% - 25px);  
+  }
+}
+
+@media (max-width: 765px) {
+  .card {
+    flex-basis: calc(100% - 35px);  
+  }
+}
+
+
+@media (max-width: 570px) {
+  .project__buttons button {
+    padding: 10px 15px;
+    border: 1px solid #301e5f;
+  }
+  .project-cards {
+    gap: 5px;
+}
+
+ 
+}

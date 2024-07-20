@@ -1,0 +1,178 @@
+.home__img{
+    display: flex;
+    margin: auto 0;
+    border-radius: 50%;
+    background: url(https://avatars.githubusercontent.com/u/93438628?v=4);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    margin-right: 10%;
+}
+
+
+.section__text {
+    align-self: center;
+    text-align: center;
+    
+  }
+
+.section__text p {
+    font-weight: 600;
+}
+
+.home_section__text__p1 {
+    text-align: center;
+    color: rgb(238, 94, 16);
+    
+}
+
+.home{
+    padding-top:10%;
+    padding-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 100%;   
+    background: linear-gradient(to bottom, #000000, #060606);
+}
+
+.home_title {
+    font-size: 4rem;
+    text-align: center;
+    color: aliceblue;
+    margin-top: 6%;
+  
+  }
+
+  .section__text__p2 {
+    font-size: 1rem;
+    margin: 0.5rem 0% 2rem 0%;
+    color: aliceblue;
+    
+  }
+.button{
+  color: black;
+  background-color: rgb(74, 217, 12);
+}
+.socials-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adjust spacing between icons */
+  margin-top: 20px;
+  margin-bottom: 10%;
+}
+
+.home__social-link {
+  display: inline-block;
+  width: 20px; /* Adjust size of circle */
+  height: 20px; /* Adjust size of circle */
+  border-radius: 50%; /* Make it circular */
+  overflow: hidden; /* Ensure content inside circle is clipped */
+  background-color: #808080; /* Gray background color */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.home__social-link img {
+  width: 100%; /* Ensure the image fills the circle */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space beneath images */
+}
+
+.home__social-link:hover {
+  background-color: #cac5c3; /* Orange background color on hover */
+}
+
+
+@media screen and (max-width: 1001px) {
+    .home__img{
+        margin-left: 35%;
+        width: 280px;
+        height: 280px;
+        margin-bottom: 2%;
+        
+    }
+    .home {
+      display: block;
+      padding-top:8%;
+    }
+   
+    
+  }
+  @media screen and (max-width: 1003px) {
+    .home_title{
+      margin-top: 0%;
+    }
+  }
+  @media screen and (max-width: 941px) {
+    .home__img{
+        margin-left: 35%;
+        width: 250px;
+        height: 250px;
+        margin-bottom: 2%;
+        
+    }
+    .home {
+      display: block;
+      padding-top:10%;
+    }
+    .home_title{
+      margin-top: 0%;
+    }
+   
+    
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .button {
+      margin-bottom: 1%;
+  }
+    .home{
+
+      padding-top: 3%;
+    }
+  }
+
+  @media screen and (max-width: 695px) {
+    .home__img{
+        margin-left: 30%;
+        width: 225px;
+        height: 225px;
+        margin-bottom: 7%;
+        
+    }
+    .home {
+      display: block;
+      padding-top: 5%;
+    }
+    .home_title{
+      font-size: 3rem;
+    }
+   
+  }
+
+  @media screen and (max-width: 555px) {
+    
+   
+  }
+
+
+  @media screen and (max-width: 435px) {
+    .home__img{
+        margin-top: 22%;
+        margin-left: 22%;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 10%;
+        
+    }
+    .home {
+      display: block;
+      
+    }
+   
+  }
+  
