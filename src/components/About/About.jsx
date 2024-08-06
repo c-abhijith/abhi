@@ -51,15 +51,14 @@ export default function About() {
               className={`fade-in ${textInView ? 'show' : ''}`}
               ref={textRef}
             >
-              As a Jr. Software Developer at Syoft, I have over 2 years of experience in developing robust REST APIs using Python and Django, and leveraging message queuing systems and gRPC for efficient communication with backend microservices. I also have proficiency in relational databases such as Postgres and Sqlite3, and tools like JIRA, New Relic, and Twilio.
+             I’m Abhijith, a software developer with 4 years of experience in creating innovative solutions. My expertise in Docker, AWS, and microservices helps me build scalable and efficient applications. I am passionate about using cutting-edge technologies to solve complex problems and make a meaningful impact.
             </p>
             <p
               id="p2"
               className={`fade-in ${textInView ? 'show' : ''}`}
               ref={textRef}
             >
-              In my role, I have successfully worked on and contributed to various microservices, such as Common, Activity, Calendar, and Notification, that handle file operations, customer relationship management, appointment scheduling, and data collection and saving, respectively. Some of my notable achievements include leading the strategic implementation of New Relic for performance monitoring, integrating gRPC for communication efficiency, and implementing Pub/Sub communication architecture for system optimization.
-            </p>
+Throughout my career, I’ve contributed to and led the development of microservices such as Common, Activity, Calendar, and Notification, which handle various functions including file operations, customer management, appointment scheduling, and data collection. My notable achievements include implementing New Relic for performance monitoring, integrating gRPC for efficient communication, and adopting Pub/Sub architecture to enhance system performance. Thank you for visiting my site—I hope you enjoy exploring my projects!            </p>
           </div>
         </div>
       </div>

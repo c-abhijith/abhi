@@ -51,7 +51,7 @@
   }
   
   .left-button, .right-button {
-    padding: 10px 16px;
+    padding: 5px 10px;
     border: .1rem solid #8213c2 ;
     border-radius: 20px;
     cursor: pointer;
