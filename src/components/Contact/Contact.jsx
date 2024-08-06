@@ -44,7 +44,7 @@ export default function Contact() {
                     <h3 className="contact__title">Talk to me</h3>
                     <div className="contact__info">
                         <div className="contact__card">
-                        <img className='icon-contact' src={`${process.env.PUBLIC_URL}/assets/whatsapp.png`} />
+                            <img className='icon-contact' src={`${process.env.PUBLIC_URL}/assets/whatsapp.png`} alt="WhatsApp logo" />
                             <div className="contact__card-data">+91 8592863045</div>
                             <a href="https://wa.me/8592863045" className='contact__button' target="_blank" rel="noreferrer">
                                 Write me <i className="bx bx-right-arrow-alt contact___button-icon"></i>
@@ -52,14 +52,16 @@ export default function Contact() {
                         </div>
 
                         <div className="contact__card">
-                        <img className='icon-contact' src={`${process.env.PUBLIC_URL}/assets/email.png`} />                            <span className="contact__card-data contact-email-title">cabhijithofficial@gmail.com</span>
-                            <a href="mailto:cabhijithofficial@gmai.com" className='contact__button'>
+                            <img className='icon-contact' src={`${process.env.PUBLIC_URL}/assets/email.png`} alt="Email logo" />
+                            <span className="contact__card-data contact-email-title">cabhijithofficial@gmail.com</span>
+                            <a href="mailto:cabhijithofficial@gmail.com" className='contact__button'>
                                 Write me <i className="bx bx-right-arrow-alt contact___button-icon"></i>
                             </a>
                         </div>
 
                         <div className="contact__card">
-                        <img className='icon-contact' src={`${process.env.PUBLIC_URL}/assets/insta.png`}/>                            <span className="contact__card-data contact-insta-title">abhijith_afy</span>
+                            <img className='icon-contact' src={`${process.env.PUBLIC_URL}/assets/insta.png`} alt="Instagram logo" />
+                            <span className="contact__card-data contact-insta-title">abhijith_afy</span>
                             <a href="https://www.instagram.com/abhijith_afy/" className='contact__button' target="_blank" rel="noreferrer">
                                 Write me <i className="bx bx-right-arrow-alt contact___button-icon"></i>
                             </a>
@@ -72,23 +74,22 @@ export default function Contact() {
                     <div className="contact__info">
                         <div className="contact__card">
                             <a href="https://wa.me/8592863045" className='contact__button tex' target="_blank" rel="noreferrer">
-                        <img className='icon-contact' src={`${process.env.PUBLIC_URL}/assets/whatsapp.png `} />
-                            <div className="contact__card-data cd">+91 8592863045</div>
-                                {/* Write me <i className="bx bx-right-arrow-alt contact___button-icon"></i> */}
+                                <img className='icon-contact' src={`${process.env.PUBLIC_URL}/assets/whatsapp.png`} alt="WhatsApp logo" />
+                                <div className="contact__card-data cd">+91 8592863045</div>
                             </a>
                         </div>
 
                         <div className="contact__card">
-                            <a href="mailto:cabhijithofficial@gmai.com" className='contact__button tex'>
-                        <img className='icon-contact' src={`${process.env.PUBLIC_URL}/assets/email.png`}  />                            <span className="contact__card-data cd contact-email-title">cabhijithofficial@gmail.com</span>
-                             {/* <i className="bx bx-right-arrow-alt contact___button-icon"></i> */}
+                            <a href="mailto:cabhijithofficial@gmail.com" className='contact__button tex'>
+                                <img className='icon-contact' src={`${process.env.PUBLIC_URL}/assets/email.png`} alt="Email logo" />
+                                <span className="contact__card-data cd contact-email-title">cabhijithofficial@gmail.com</span>
                             </a>
                         </div>
 
                         <div className="contact__card">
                             <a href="https://www.instagram.com/abhijith_afy/" className='contact__button tex' target="_blank" rel="noreferrer">
-                        <img className='icon-contact' src={`${process.env.PUBLIC_URL}/assets/insta.png`} />                            <span className="contact__card-data cd contact-insta-title">abhijith_afy</span>
-                                {/* Write me <i className="bx bx-right-arrow-alt contact___button-icon"></i> */}
+                                <img className='icon-contact' src={`${process.env.PUBLIC_URL}/assets/insta.png`} alt="Instagram logo" />
+                                <span className="contact__card-data cd contact-insta-title">abhijith_afy</span>
                             </a>
                         </div>
                     </div>
@@ -106,7 +107,7 @@ export default function Contact() {
                         </div>
 
                         <div className="contact__form-div">
-                            <label className="contact__form-tag">Mail_id</label>
+                            <label className="contact__form-tag">Mail ID</label>
                             <input type="email" 
                                 className="contact__form-input"
                                 name="email" placeholder='Enter your email'
@@ -115,8 +116,8 @@ export default function Contact() {
 
                         <div className="contact__form-div contact__form-area">
                             <label className="contact__form-tag">Message</label>
-                            <textarea name="project" id="" cols="30"
-                                rows="10" className='contact__form-input '
+                            <textarea name="project" cols="30"
+                                rows="10" className='contact__form-input'
                                 placeholder='Write your message'
                             ></textarea>
                         </div>
@@ -142,9 +143,6 @@ export default function Contact() {
                         </button>
                     </form>
                 </div>
-
-                
-
             </div>
             <ToastContainer />
         </section>

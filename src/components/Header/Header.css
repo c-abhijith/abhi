@@ -1,4 +1,4 @@
-.header{
+.header {
     height: 10%;
     width: 100%;
     position: fixed;
@@ -6,78 +6,91 @@
     left: 0;
     z-index: var(--z-fixed);
 }
-.nav__logo{
+
+.nav__logo {
     font-style: italic;
     font-family: none;
     font-size: 200%;
-    font-weight:900;
-    color:rgb(210 75 11);
+    font-weight: 900;
+    color: rgb(210, 75, 11);
+    transition: color 0.3s ease;
 }
-.nav{
-    height:calc(var(--header-height) + 1.5rem);
+
+.nav__logo:hover {
+    color: rgb(243, 239, 237);
+}
+
+.nav {
+    height: calc(var(--header-height) + 1.5rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
     column-gap: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-/* .nav__logo, */
-.nav__toggle{
-    color:rgb(227, 115, 3);
-    /* color:gray; */
+.nav__toggle {
+    color: rgb(227, 115, 3);
     font-weight: var(--font-medium);
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.nav__list{
+.nav__toggle:hover {
+    color: rgb(243, 239, 237);
+}
+
+.nav__list {
     display: flex;
     column-gap: 2rem;
+    transition: opacity 0.3s ease;
 }
 
-.nav__link{
+.nav__link {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color:rgb(227, 115, 3);
-    /* color: gray; */
+    color: rgb(227, 115, 3);
     font-size: var(--small-font-size);
     font-weight: var(--font-medium);
-    transition: .3s;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav__link:hover {
+    color: rgb(242, 239, 236);
+    transform: scale(1.05);
 }
 
 .nav__close,
 .nav__icon,
-.nav__toggle{
+.nav__toggle {
     display: none;
 }
 
-
-.active-link:hover{
-    color:rgb(243, 239, 237);
-    /* color: var(--title-color-dark); */
-}
-.nav__link:hover{
-    color: rgb(242, 239, 236);
-    /* color: var(--title-color-dark); */
+.active-link:hover {
+    color: rgb(243, 239, 237);
 }
 
-@media screen and (max-width:992px) {
-    .container{
+@media screen and (max-width: 992px) {
+    .container {
         margin-left: var(--mb-1-5);
         margin-right: var(--mb-1-5);
     }
 }
 
-@media screen and (max-width:768px) {
-    .header{
+@media screen and (max-width: 768px) {
+    .header {
         background-color: rgba(0, 0, 14, 0.72);
-        top:initial;
+        top: initial;
         bottom: 0;
+        animation: slideInHeader 0.3s ease-out;
     }
-    .nav{
-        height: var(--header-height);
 
+    .nav {
+        height: var(--header-height);
     }
-    .nav__menu{
+
+    .nav__menu {
         position: fixed;
         bottom: -100%;
         left: 0;
@@ -86,65 +99,76 @@
         padding: 2rem 1.5rem 4rem;
         box-shadow: 0 -1px 4px rgba(0, 0, 0, 0);
         border-radius: 1.5rem 1.5rem 0 0;
-        transition: .3s;
+        transition: bottom 0.3s ease;
     }
-    /* show menu*/
-    .show-menu{
+
+    .show-menu {
         bottom: 0;
     }
 
-    .nav__list{
+    .nav__list {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap:2rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        opacity: 0;
+        animation: fadeInList 0.3s forwards;
     }
 
-    .nav__icon{
-        font-size:1.2rem ;
+    .nav__icon {
+        font-size: 1.2rem;
     }
 
-    .nav__close{
+    .nav__close {
         position: absolute;
         right: 1.3rem;
         bottom: .5rem;
         font-size: 1.5rem;
         cursor: pointer;
-        color:rgb(242, 237, 232);
+        color: rgb(242, 237, 232);
+        transition: color 0.3s ease;
     }
 
-    .nav__close:hover{
+    .nav__close:hover {
         color: var(--title-color-dark);
     }
 
-    .nav__toggle{
+    .nav__toggle {
         cursor: pointer;
         font-size: 1.1rem;
     }
 
     .nav__icon,
     .nav__close,
-    .nav__toggle{
+    .nav__toggle {
         display: block;
     }
 }
 
-@media screen and (max-width:768px) {
-    .nav{
-        margin-top: 2%;
-       }
-    .nav__menu{
-        padding: 2rem 0.25rem 4rem;
-    }
-
-    .nav_list{
-        column-gap: 0;
+@media screen and (max-width: 350px) {
+    .container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
     }
 }
 
-@media screen and (max-width:350px) {
-  
-    .container{
-        margin-left: var(--mb-1);
-        margin-right: var(--mb-1);
+@keyframes slideInHeader {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInList {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

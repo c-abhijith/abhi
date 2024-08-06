@@ -210,3 +210,88 @@
     }
   
 }
+
+
+/* Keyframe animation for fading in elements */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframe animation for slide-in from the bottom */
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframe animation for pulse effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+/* Keyframe animation for rotating icon */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Apply fadeIn animation to contact section */
+.contact {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Apply slideInFromBottom animation to contact title */
+.contact__title {
+    animation: slideInFromBottom 1s ease-out;
+}
+
+/* Apply fadeIn animation to contact cards with a delay for a staggered effect */
+.contact__card {
+    animation: fadeIn 1s ease-in-out;
+    animation-delay: 0.2s; /* Delay for staggered effect */
+}
+
+/* Apply pulse animation to contact buttons */
+.contact__button {
+    animation: pulse 2s infinite;
+}
+
+/* Apply rotation animation to contact icons */
+.icon-contact {
+    animation: rotate 3s linear infinite;
+}
+
+/* Apply slideInFromBottom animation to contact form */
+.contact__form {
+    animation: slideInFromBottom 1s ease-out;
+}
+
+/* Animation for a subtle bounce effect on hover for the form input */
+.contact__form-input:hover {
+    animation: pulse 1s infinite;
+}
