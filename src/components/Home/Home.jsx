@@ -12,7 +12,7 @@ export default function Home() {
         <h1 className="home_title">Abhijith C</h1>
         <p className="section__text__p2">Back-end Developer</p>
         <div className="btn-container">
-          <a href="#contact" className='button button--flex'>  Download CV <i class="uil uil-import"></i> </a>
+          <a href="#contact" className='buttons button--flex'>  Download CV <i class="uil uil-import"></i> </a>
         </div>
         <div className="socials-container">
         <a href="https://www.linkedin.com/in/cabhijithofficial/" className="home__social-link">

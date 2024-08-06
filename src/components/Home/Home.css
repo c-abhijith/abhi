@@ -1,178 +1,211 @@
-.home__img{
-    display: flex;
-    margin: auto 0;
-    border-radius: 50%;
-    background: url(https://avatars.githubusercontent.com/u/93438628?v=4);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    justify-content: center;
-    width: 400px;
-    height: 400px;
-    margin-right: 10%;
+.home__img {
+  display: flex;
+  margin: auto 0;
+  border-radius: 50%;
+  background: url(https://avatars.githubusercontent.com/u/93438628?v=4);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  margin-right: 10%;
+  transition: transform 0.3s ease;
 }
 
+.home__img:hover {
+  transform: scale(1.05);
+}
+
+.buttons {
+  display: inline-block;
+  background-color: rgb(74, 217, 12);
+  color: black;
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  font-weight: var(--font-medium);
+  transition: transform 0.3s ease;
+}
+
+.buttons:hover {
+  transform: scale(1.05);
+}
 
 .section__text {
-    align-self: center;
-    text-align: center;
-    
+  align-self: center;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
   }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
 
 .section__text p {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .home_section__text__p1 {
-    text-align: center;
-    color: rgb(238, 94, 16);
-    
+  text-align: center;
+  color: rgb(238, 94, 16);
 }
 
-.home{
-    padding-top:10%;
-    padding-bottom: 10%;
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    height: 100%;   
-    background: linear-gradient(to bottom, #000000, #060606);
+.home {
+  padding-top: 15%;
+  padding-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 100%;
+  background: linear-gradient(to bottom, #000000, #060606);
+  opacity: 0;
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 .home_title {
-    font-size: 4rem;
-    text-align: center;
-    color: aliceblue;
-    margin-top: 6%;
-  
-  }
-
-  .section__text__p2 {
-    font-size: 1rem;
-    margin: 0.5rem 0% 2rem 0%;
-    color: aliceblue;
-    
-  }
-.button{
-  color: black;
-  background-color: rgb(74, 217, 12);
+  font-size: 4rem;
+  text-align: center;
+  color: aliceblue;
+  margin-top: 6%;
 }
+
+.section__text__p2 {
+  font-size: 1rem;
+  margin: 0.5rem 0% 2rem 0%;
+  color: aliceblue;
+}
+
 .socials-container {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Adjust spacing between icons */
+  gap: 10px;
   margin-top: 20px;
   margin-bottom: 10%;
 }
 
 .home__social-link {
   display: inline-block;
-  width: 20px; /* Adjust size of circle */
-  height: 20px; /* Adjust size of circle */
-  border-radius: 50%; /* Make it circular */
-  overflow: hidden; /* Ensure content inside circle is clipped */
-  background-color: #808080; /* Gray background color */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #808080;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .home__social-link img {
-  width: 100%; /* Ensure the image fills the circle */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Remove extra space beneath images */
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .home__social-link:hover {
-  background-color: #cac5c3; /* Orange background color on hover */
+  transform: scale(1.1);
+  background-color: #cac5c3;
 }
 
+.home__social-icon {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.home__social-icon:hover {
+  transform: scale(1.2);
+  color: rgb(74, 217, 12);
+}
 
 @media screen and (max-width: 1001px) {
-    .home__img{
-        margin-left: 35%;
-        width: 280px;
-        height: 280px;
-        margin-bottom: 2%;
-        
-    }
-    .home {
+  .home__img {
+      margin-left: 35%;
+      width: 280px;
+      height: 280px;
+      margin-bottom: 2%;
+  }
+  .home {
       display: block;
-      padding-top:8%;
-    }
-   
-    
+      padding-top: 8%;
   }
-  @media screen and (max-width: 1003px) {
-    .home_title{
+}
+
+@media screen and (max-width: 1003px) {
+  .home_title {
       margin-top: 0%;
-    }
   }
-  @media screen and (max-width: 941px) {
-    .home__img{
-        margin-left: 35%;
-        width: 250px;
-        height: 250px;
-        margin-bottom: 2%;
-        
-    }
-    .home {
+}
+
+@media screen and (max-width: 941px) {
+  .home__img {
+      margin-left: 35%;
+      width: 250px;
+      height: 250px;
+      margin-bottom: 2%;
+  }
+  .home {
       display: block;
-      padding-top:10%;
-    }
-    .home_title{
-      margin-top: 0%;
-    }
-   
-    
+      padding-top: 10%;
   }
+  .home_title {
+      margin-top: 0%;
+  }
+}
 
-
-  @media screen and (max-width: 768px) {
-    .button {
+@media screen and (max-width: 768px) {
+  .buttons {
       margin-bottom: 1%;
   }
-    .home{
-
+  .home {
       padding-top: 3%;
-    }
   }
+}
 
-  @media screen and (max-width: 695px) {
-    .home__img{
-        margin-left: 30%;
-        width: 225px;
-        height: 225px;
-        margin-bottom: 7%;
-        
-    }
-    .home {
+@media screen and (max-width: 695px) {
+  .home__img {
+      margin-left: 30%;
+      width: 225px;
+      height: 225px;
+      margin-bottom: 7%;
+  }
+  .home {
       display: block;
       padding-top: 5%;
-    }
-    .home_title{
+  }
+  .home_title {
       font-size: 3rem;
-    }
-   
   }
+}
 
-  @media screen and (max-width: 555px) {
-    
-   
+@media screen and (max-width: 555px) {
+  /* Add any additional styles for smaller screens here */
+}
+
+@media screen and (max-width: 435px) {
+  .home__img {
+      margin-top: 22%;
+      margin-left: 22%;
+      width: 200px;
+      height: 200px;
+      margin-bottom: 10%;
   }
-
-
-  @media screen and (max-width: 435px) {
-    .home__img{
-        margin-top: 22%;
-        margin-left: 22%;
-        width: 200px;
-        height: 200px;
-        margin-bottom: 10%;
-        
-    }
-    .home {
+  .home {
       display: block;
-      
-    }
-   
   }
-  
+}

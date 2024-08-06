@@ -29,7 +29,7 @@ export default function Header() {
 
                     <li className="nav__item" onClick={()=> showMenu(!Toggle)}>
                         <a href="#qualification" className='nav__link active-link'>
-                        <i class="uil uil-file-minus-alt nav__icon"></i>Qulificcation
+                        <i class="uil uil-file-minus-alt nav__icon"></i>Qualification
                         </a>
                     </li>
 

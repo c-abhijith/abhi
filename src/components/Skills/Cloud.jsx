@@ -33,23 +33,23 @@ export const Cloud = () => {
 
             <div className="skills__group">
                 <div className="skills__data">
-                <img className='icon-skills' src={`${process.env.PUBLIC_URL}/assets/java.png`}  />
+                <img className='icon-skills' src={`${process.env.PUBLIC_URL}/assets/Github_action.png`} />
                     <div>
-                        <h3 className="skills__name">Java</h3>
+                        <h3 className="skills__name">Git Action</h3>
                         {/* <span className="skills__level">sdfasdfasdfasd</span> */}
                     </div>
                 </div>
 
                 <div className="skills__data">
-                {/* <img className='icon-skills' src={`${process.env.PUBLIC_URL}/assets/github.png /> */}
+                <img className='icon-skills' src={`${process.env.PUBLIC_URL}/assets/docker.png`} />
                     <div>
-                        {/* <h3 className="skills__name">GitHub</h3> */}
+                        <h3 className="skills__name">Docker</h3>
                         {/* <span className="skills__level">sdfasdfasdfasd</span> */}
                     </div>
                 </div>
 
                 <div className="skills__data">
-                {/* <img className='icon-skills' src={`${process.env.PUBLIC_URL}/assets/gitlab.png' /> */}
+                {/* <img className='icon-skills' src={`${process.env.PUBLIC_URL}/assets/docker.png`} /> */}
                     <div>
                         {/* <h3 className="skills__name">GitLab</h3> */}
                         {/* <span className="skills__level">sdfasdfasdfasd</span> */}

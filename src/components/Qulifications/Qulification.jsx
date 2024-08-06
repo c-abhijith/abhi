@@ -7,7 +7,7 @@ export default function Qulification() {
     }
   return (
     <div className="qualification section" id='qualification'>
-        <h2 className="section__title">Qulification</h2>
+        <h2 className="section__title">Qualification</h2>
         <span className="section__subtitle">My personel journey</span>
         <div className="qualification__container container">
             <div className="qualification__tabs">

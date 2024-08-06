@@ -156,9 +156,9 @@ img {
   font-weight: var(--font-medium);
 }
 
-.button:hover {
+/* .button:hover {
   background-color: var(--title-color-dark);
-}
+} */
 
 .button__icon {
   margin-left: var(--mb-0-5);

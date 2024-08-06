@@ -149,15 +149,15 @@ img{
 .button{
   display: inline-block;
   background-color: rgb(238, 94, 16);
-  color: var(--container-color);
+  color:rgb(250, 247, 247);
   padding: 1.25rem 2rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
 }
 
-.button:hover{
-  background-color: var(--title-color-dark);
-}
+/* .button:hover{
+  background-color: rgb(228, 154, 44);
+} */
 
 .button__icon{
   margin-left: var(--mb-0-5);
