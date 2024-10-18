@@ -16,6 +16,11 @@
     column-gap: 6rem;
     padding-bottom: 3rem;
 }
+.section__titles {
+    font-size: 2.5rem;
+
+    animation: fadeInTitle 0.8s ease-out;
+}
 
 .contact__title{
     text-align: center;
@@ -281,17 +286,3 @@
     animation: pulse 2s infinite;
 }
 
-/* Apply rotation animation to contact icons */
-.icon-contact {
-    animation: rotate 3s linear infinite;
-}
-
-/* Apply slideInFromBottom animation to contact form */
-.contact__form {
-    animation: slideInFromBottom 1s ease-out;
-}
-
-/* Animation for a subtle bounce effect on hover for the form input */
-.contact__form-input:hover {
-    animation: pulse 1s infinite;
-}
