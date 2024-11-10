@@ -52,6 +52,7 @@ export default function About() {
               ref={textRef}
             >
              I’m Abhijith, a software developer with 4 years of experience in creating innovative solutions. My expertise in Docker, AWS, and microservices helps me build scalable and efficient applications. I am passionate about using cutting-edge technologies to solve complex problems and make a meaningful impact.
+         
             </p>
             <p
               id="p2"
