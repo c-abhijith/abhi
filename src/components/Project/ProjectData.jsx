@@ -19,7 +19,7 @@ const projectsData = [
         "category": ["Python","Web"],
         "image": `${process.env.PUBLIC_URL}/assets/draw.png`,
         "git": "https://github.com/c-abhijith/Galary.git",
-        "web": "",
+        "web": "https://draw-2gdntp5tw-abhis-projects-a823021e.vercel.app/",
         "video":""
     }
     ,
