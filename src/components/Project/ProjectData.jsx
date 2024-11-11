@@ -53,36 +53,6 @@ const projectsData = [
         "image": `${process.env.PUBLIC_URL}/assets/zwast.png`, 
         "git": "https://github.com/c-abhijith/zwaste-backend-.git",
         "web": "https://youtu.be/ndbB3nIJwH8?si=KE_164j6IO_J7u-C"
-    },
-    {
-        "id": 5,
-        "title": "Netflix",
-        "keys": ["React"],
-        "description": "In my Netflix project, I built a platform with React, featuring video streaming functionality and an integrated API. This project highlights my skills in creating a seamless and interactive user experience using modern web technologies.",
-        "category": ["JS"],
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1zOSlgbjfI8Au4o9Py4m_4Cipf6pbCWqXgoZzokqQffB7eLFBpjKlgqflVg&s",
-        "git": "",
-        "web": ""
-    },
-    {
-        "id": 6,
-        "title": "OLX",
-        "keys": ["React", "Firebase"],
-        "description": "In my OLX-like project, I used React and Firebase to create a platform for buying and selling items. The project demonstrates my proficiency in integrating front-end and back-end technologies to build a functional and user-friendly application.",
-        "category": ["JS"],
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1zOSlgbjfI8Au4o9Py4m_4Cipf6pbCWqXgoZzokqQffB7eLFBpjKlgqflVg&s",
-        "git": "",
-        "web": ""
-    },
-    {
-        "id": 7,
-        "title": "KTM",
-        "keys": ["HTML", "CSS"],
-        "description": "The KTM project showcases a website built with HTML and CSS. It highlights my ability to create visually appealing and responsive designs with fundamental web technologies.",
-        "category": ["Web"],
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1zOSlgbjfI8Au4o9Py4m_4Cipf6pbCWqXgoZzokqQffB7eLFBpjKlgqflVg&s",
-        "git": "",
-        "web": ""
     }
   ]
   
