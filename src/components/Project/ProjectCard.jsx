@@ -4,7 +4,7 @@ import { FaGithub } from 'react-icons/fa'; // GitHub icon from Font Awesome
 import { AiOutlineEye } from 'react-icons/ai';
 
 const ProjectCard = ({ project }) => {
-  const { title, keys, description, image } = project;
+  const { title, keys, description, image, git, web } = project; // Ensure git and web are extracted
 
   const renderKeys = () => {
     return keys.map((key, index) => (
@@ -12,12 +12,12 @@ const ProjectCard = ({ project }) => {
     ));
   };
 
-  const handleLeftButtonClick = () => {
-    window.location.href = 'https://github.com/your-repo'; // Replace with actual GitHub repo URL
+  const handleLeftButtonClick = (git) => {
+    window.location.href = git; // Navigate to the GitHub repo URL
   };
 
-  const handleRightButtonClick = () => {
-    window.location.href = 'https://your-project-url'; // Replace with actual project URL
+  const handleRightButtonClick = (web) => {
+    window.location.href = web; // Navigate to the project URL
   };
 
   return (
@@ -32,10 +32,10 @@ const ProjectCard = ({ project }) => {
         </div>
         <p className="card-description" id="dec">{description}</p>
         <div className="card-buttons">
-          <button className="left-button" onClick={handleLeftButtonClick}>
+          <button className="left-button" onClick={() => handleLeftButtonClick(git)}>
             <FaGithub style={{ marginRight: '8px' }} /> GitHub
           </button>
-          <button className="right-button" onClick={handleRightButtonClick}>
+          <button className="right-button" onClick={() => handleRightButtonClick(web)}>
             <AiOutlineEye style={{ marginRight: '8px' }} /> View
           </button>
         </div>

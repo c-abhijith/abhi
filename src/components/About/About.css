@@ -1,9 +1,9 @@
 /* General Styles */
 .about {
-    background: linear-gradient(to bottom, #060606, #1c1b1b);
+    background: var(--bg-primary);
     position: relative;
     padding: 2rem;
-    color: white;
+    color: var(--text-primary);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,7 +105,7 @@
     height: 100%;
     object-fit: cover;
     margin-bottom: 10rem;
-    border: 1px solid rgb(130, 37, 237);
+    border: 1px solid var(--border-color);
 }
 
 .about-details-container {
@@ -143,7 +143,7 @@
 
 .icons {
     font-size: 200%;
-    color: #e96909;
+    color: var(--icon-color);
     transition: transform 0.3s ease;
 }
 
@@ -155,15 +155,16 @@
     padding: 1.5rem;
     flex: 1 1;
     border-radius: 2rem;
-    border: 1px solid rgb(130, 37, 237);
+    background: var(--container-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
     text-align: center;
-    color: white;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .details-container:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px var(--hover-shadow);
 }
 
 .text-container {
@@ -204,7 +205,7 @@
     }
 
     .details-container {
-        border: 1px solid rgb(158, 125, 195);
+        border: 1px solid var(--border-color);
     }
 
     #about {
@@ -282,4 +283,118 @@
   }
   
   /* Other existing styles */
+  
+  /* Theme Variables */
+  :root {
+    /* Dark theme default colors */
+    --bg-primary: linear-gradient(to bottom, #060606, #1c1b1b);
+    --text-primary: #ffffff;
+    --border-color: rgb(130, 37, 237);
+    --hover-shadow: rgba(0, 0, 0, 0.3);
+    --icon-color: #e96909;
+    --container-bg: rgba(130, 37, 237, 0.1);
+  }
+
+  /* Light theme colors */
+  [data-theme="light"] {
+    --bg-primary: linear-gradient(to bottom, #f0f0f0, #ffffff);
+    --text-primary: #333333;
+    --border-color: rgb(130, 37, 237);
+    --hover-shadow: rgba(130, 37, 237, 0.2);
+    --icon-color: #e96909;
+    --container-bg: rgba(130, 37, 237, 0.05);
+  }
+
+  /* Update existing styles to use variables */
+  .about {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    /* ... rest of the properties remain same ... */
+  }
+
+  .details-container {
+    background: var(--container-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    /* ... rest of the properties remain same ... */
+  }
+
+  .details-container:hover {
+    box-shadow: 0 4px 8px var(--hover-shadow);
+    /* ... rest of the properties remain same ... */
+  }
+
+  .icons {
+    color: var(--icon-color);
+    /* ... rest of the properties remain same ... */
+  }
+
+  .about-pic {
+    border: 1px solid var(--border-color);
+    /* ... rest of the properties remain same ... */
+  }
+
+  /* Theme transition */
+  .about, .details-container, .icons, .about-pic {
+    transition: all 0.3s ease;
+  }
+
+  /* Media query adjustments */
+  @media (max-width: 750px) {
+    .details-container {
+        border: 1px solid var(--border-color);
+    }
+    /* ... rest remains same ... */
+  }
+
+  /* Theme toggle button styles */
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+
+  /* Dark theme button styles */
+  .theme-toggle.dark {
+    background: #ffffff20;
+    color: #ffd700;
+  }
+
+  /* Light theme button styles */
+  .theme-toggle.light {
+    background: #00000010;
+    color: #6b6b6b;
+  }
+
+  .theme-toggle:hover {
+    transform: scale(1.1);
+  }
+
+  .theme-toggle:hover.dark {
+    background: #ffffff30;
+  }
+
+  .theme-toggle:hover.light {
+    background: #00000020;
+  }
+
+  .theme-icon {
+    font-size: 1.2rem;
+  }
+
+  /* Focus styles for accessibility */
+  .theme-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--border-color);
+  }
   

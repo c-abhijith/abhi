@@ -16,7 +16,7 @@ const CertificatesCard = ({ certificate }) => {
   };
 
   return (
-    <div className="card">
+    <div className="card" id='card'>
       <div className="card-image">
         <img src={image} alt={title} />
       </div>
