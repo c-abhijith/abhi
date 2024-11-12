@@ -17,7 +17,7 @@ const ProjectCard = ({ project }) => {
   };
 
   const handleRightButtonClick = (web) => {
-    window.location.href = web; // Navigate to the project URL
+    window.open(web, '_blank'); // Open the project URL in a new tab
   };
 
   return (
