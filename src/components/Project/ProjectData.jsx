@@ -3,16 +3,16 @@ const projectsData = [
     {
         "id": 1,
         "title": "Todo App",
-        "keys": ["React", "Bootstrap"],
+        "keys": ["React"],
         "description": "The React To-Do app allows users to add tasks that are temporarily stored, providing an interactive way to manage their to-do list, but the data is not persisted beyond the current session.",
-        "category": ["Python","Web"],
+        "category": ["JS","Web"],
         "image": `${process.env.PUBLIC_URL}/assets/todo.png`,
         "git": "https://github.com/c-abhijith/Todo-APP.git",
         "web": "https://c-abhijith.github.io/Todo-App/",
         "video":"https://github.com/c-abhijith/Todo-App.git"
     },
     {
-        "id": 1,
+        "id": 2,
         "title": "Draw",
         "keys": ["Flask", "JS", "Bootstrap"],
         "description": "This is a Flask template project that integrates PostgreSQL for backend operations, with dynamic image rendering of a 'draw' image. It uses Flask templates to serve content efficiently while managing user data through a PostgreSQL database.",
@@ -23,7 +23,7 @@ const projectsData = [
         "video":""
     }, 
     {
-        "id": 2,
+        "id": 3,
         "title": "Chat",
         "keys": ["Django", "JS", "WebSockets"],
         "description": "The Django chat room application uses WebSockets for real-time communication, allowing users to join chat rooms, send and receive messages instantly. The template dynamically updates the chat interface as messages are exchanged, creating an interactive and responsive chat experience.",
@@ -35,7 +35,7 @@ const projectsData = [
     }
     ,
     {
-        "id": 3,
+        "id": 4,
         "title": "Ogle",
         "keys": ["Python", "Django", "SQL"],
         "description": "In my latest e-commerce project, I created a platform with Admin and User roles, secure OTP validation, and reporting in Excel and PDF formats. The system also integrates PayPal for seamless transactions, demonstrating my ability to deliver complex, user-centric solutions with robust security and reporting features.",
@@ -45,7 +45,7 @@ const projectsData = [
         "web": "https://youtu.be/Q1fKqazATtc?si=Xnjk9hE0LGP9P_SE"
     },
     {
-        "id": 4,
+        "id": 5,
         "title": "Zwast",
         "keys": ["React", "Django", "Postgres"],
         "description": "In my waste management project, I built a platform with React and Django REST Framework (DRF), featuring JWT authentication, interactive React maps, and payment options via PayPal and Razorpay. This project showcases my skills in integrating modern technologies for improved functionality and user experience.",
