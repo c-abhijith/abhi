@@ -3,14 +3,14 @@ import './About.css';
 
 export default function About() {
     const sphereRef = useRef(null);
-    let tagCloudInstance = null; // Store the TagCloud instance
+    const tagCloudRef = useRef(null); // Store TagCloud instance in a ref
 
     useEffect(() => {
         const initTagCloud = async () => {
             try {
                 const TagCloud = (await import('TagCloud')).default;
+                const currentSphereRef = sphereRef.current; // Store ref value
                 
-                const container = '.tagcloud';
                 const texts = [
                     'Python', 'Django', 'JavaScript',
                     'FastAPI', 'Flask', 'gRPC',
@@ -28,18 +28,18 @@ export default function About() {
                     keep: true
                 };
 
-                // Clear previous instance if exists
-                if (tagCloudInstance) {
-                    tagCloudInstance.destroy();
+                // Cleanup previous instance
+                if (tagCloudRef.current) {
+                    tagCloudRef.current.destroy();
                 }
 
                 // Clear container
-                if (sphereRef.current) {
-                    sphereRef.current.innerHTML = '';
+                if (currentSphereRef) {
+                    currentSphereRef.innerHTML = '';
                 }
 
                 // Create new instance
-                tagCloudInstance = TagCloud(container, texts, options);
+                tagCloudRef.current = TagCloud('.tagcloud', texts, options);
 
             } catch (error) {
                 console.error("Error initializing TagCloud:", error);
@@ -50,14 +50,16 @@ export default function About() {
 
         // Cleanup function
         return () => {
-            if (tagCloudInstance) {
-                tagCloudInstance.destroy();
+            if (tagCloudRef.current) {
+                tagCloudRef.current.destroy();
             }
-            if (sphereRef.current) {
-                sphereRef.current.innerHTML = '';
+            // Use stored ref value in cleanup
+            const currentSphereRef = sphereRef.current;
+            if (currentSphereRef) {
+                currentSphereRef.innerHTML = '';
             }
         };
-    }, []); // Empty dependency array to run only once
+    }, []); // Empty dependency array
 
     return (
         <section className="about">

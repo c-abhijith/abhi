@@ -36,7 +36,7 @@
 
 .certificate {
   text-align: center;
-  background: linear-gradient(to bottom, #161316, #242323);
+  background: black;
   padding-top: 5%;
   padding: 5rem;
   transition: background-color 0.3s ease;
@@ -178,4 +178,208 @@ button:focus {
   .certificate-cards {
       gap: 5px;
   }
+}
+
+.certificates {
+    padding: 6rem 2rem;
+    background: black;
+}
+
+.certificates__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* Certificate Card */
+.certificate__card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    border: 1px solid rgba(130, 19, 194, 0.2);
+}
+
+.certificate__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+}
+
+.certificate__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.certificate__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(130, 19, 194, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.view__button {
+    padding: 1rem 2rem;
+    background: white;
+    border: none;
+    border-radius: 30px;
+    color: #8213c2;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.certificate__content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.certificate__title {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Hover Effects */
+.certificate__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.2),
+        0 0 120px rgba(130, 19, 194, 0.1);
+}
+
+.certificate__card:hover .certificate__img {
+    transform: scale(1.1);
+}
+
+.certificate__card:hover .certificate__overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.certificate__card:hover .view__button {
+    transform: translateY(0);
+}
+
+.view__button:hover {
+    background: #8213c2;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(130, 19, 194, 0.3);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.modal__content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    animation: scaleIn 0.3s ease forwards;
+}
+
+.modal__image {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(130, 19, 194, 0.3);
+}
+
+.modal__close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.modal__close:hover {
+    transform: rotate(90deg);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .certificates {
+        padding: 4rem 1rem;
+    }
+
+    .certificates__container {
+        gap: 1.5rem;
+    }
+
+    .view__button {
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .certificate__title {
+        font-size: 1.1rem;
+    }
 }

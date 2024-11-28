@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { AiOutlineEye } from 'react-icons/ai';
 import Modal from './Modal';
-// import './CertificatesCard.css'; // Ensure you have your card styles here
+import './CertificatesCard.css';
 
 const CertificatesCard = ({ certificate }) => {
   const { title, image } = certificate;
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleViewClick = () => {
     setIsModalOpen(true);
@@ -16,17 +17,25 @@ const CertificatesCard = ({ certificate }) => {
   };
 
   return (
-    <div className="card" id='card'>
-      <div className="card-image">
-        <img src={image} alt={title} />
-      </div>
-      <div className="card-content">
-        <h3 className="card-title">{title}</h3>
-        <div className="card-buttons">
-          <button className="left-button" onClick={handleViewClick}>
-            <AiOutlineEye style={{ marginRight: '8px' }} /> View
+    <div 
+      className={`certificate-card ${isHovered ? 'hovered' : ''}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="certificate-image-wrapper">
+        <img src={image} alt={title} className="certificate-image" />
+        <div className="certificate-overlay">
+          <button 
+            className="view-button"
+            onClick={handleViewClick}
+          >
+            <AiOutlineEye className="eye-icon" />
+            <span>View Certificate</span>
           </button>
         </div>
+      </div>
+      <div className="certificate-content">
+        <h3 className="certificate-title">{title}</h3>
       </div>
       <Modal isOpen={isModalOpen} onClose={handleCloseModal} image={image} />
     </div>
