@@ -3,7 +3,7 @@
 }
 
 .qualification__container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -26,115 +26,117 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    position: relative;
 }
 
 .active-tab {
     color: #4caf50;
 }
 
-.active-tab::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: #4caf50;
-}
-
-/* Steps Design */
-.steps {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+/* Timeline */
+.timeline {
     position: relative;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.steps::before {
+.timeline::after {
     content: '';
     position: absolute;
-    left: 0;
+    width: 4px;
+    background: #4caf50;
     top: 0;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(
-        to bottom,
-        #4caf50 0%,
-        #4caf50 100%
-    );
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     opacity: 0.2;
 }
 
-.steps__item {
+.timeline__item {
+    padding: 10px 40px;
     position: relative;
-    padding-left: 2rem;
+    width: 50%;
+    animation: fadeInSlide 0.5s ease forwards;
     opacity: 0;
-    transform: translateX(-20px);
-    animation: slideIn 0.5s ease forwards;
 }
 
-.steps__item::before {
-    content: '';
-    position: absolute;
-    left: -4px;
-    top: 0;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #4caf50;
-    transition: all 0.3s ease;
+.left {
+    left: 0;
+    transform: translateX(-30px);
 }
 
-.steps__content {
-    background: rgba(76, 175, 80, 0.03);
+.right {
+    left: 50%;
+    transform: translateX(30px);
+}
+
+.timeline__content {
     padding: 1.5rem;
+    background: rgba(76, 175, 80, 0.03);
     border-radius: 8px;
+    position: relative;
     transition: all 0.3s ease;
 }
 
-.steps__year {
+.timeline__period {
     color: #4caf50;
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
-.steps__details h3 {
+.timeline__marker {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #4caf50;
+    position: absolute;
+    top: 20px;
+    transition: all 0.3s ease;
+}
+
+.left .timeline__marker {
+    right: -48px;
+}
+
+.right .timeline__marker {
+    left: -48px;
+}
+
+.timeline__content h3 {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
     color: #333;
 }
 
-.steps__details p {
+.timeline__content p {
     color: #666;
     font-size: 0.9rem;
 }
 
 /* Hover Effects */
-.steps__item:hover::before {
-    transform: scale(1.5);
+.timeline__content:hover {
+    transform: translateY(-5px);
+    background: rgba(76, 175, 80, 0.05);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
+}
+
+.timeline__content:hover .timeline__marker {
+    transform: scale(1.3);
     box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
 }
 
-.steps__item:hover .steps__content {
-    transform: translateX(10px);
-    background: rgba(76, 175, 80, 0.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
 /* Animations */
-@keyframes slideIn {
+@keyframes fadeInSlide {
     to {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
-.steps__item:nth-child(1) { animation-delay: 0.1s; }
-.steps__item:nth-child(2) { animation-delay: 0.2s; }
-.steps__item:nth-child(3) { animation-delay: 0.3s; }
-.steps__item:nth-child(4) { animation-delay: 0.4s; }
+.timeline__item:nth-child(1) { animation-delay: 0.2s; }
+.timeline__item:nth-child(2) { animation-delay: 0.4s; }
+.timeline__item:nth-child(3) { animation-delay: 0.6s; }
+.timeline__item:nth-child(4) { animation-delay: 0.8s; }
 
 /* Active Content */
 .qualification__content {
@@ -147,20 +149,35 @@
 
 /* Responsive */
 @media screen and (max-width: 768px) {
-    .qualification {
-        padding: 4rem 1rem;
+    .timeline::after {
+        left: 31px;
     }
 
-    .steps__content {
+    .timeline__item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline__item.right {
+        left: 0;
+    }
+
+    .timeline__marker {
+        left: 23px !important;
+        right: auto !important;
+    }
+
+    .timeline__content {
         padding: 1.2rem;
-    }
-
-    .steps__details h3 {
-        font-size: 1rem;
     }
 }
 
 @media screen and (max-width: 576px) {
+    .qualification {
+        padding: 4rem 1rem;
+    }
+
     .qualification__tabs {
         gap: 1rem;
     }
@@ -170,15 +187,19 @@
         padding: 0.4rem 0.8rem;
     }
 
-    .steps__content {
+    .timeline__content {
         padding: 1rem;
     }
 
-    .steps__year {
+    .timeline__period {
         font-size: 0.8rem;
     }
 
-    .steps__details p {
+    .timeline__content h3 {
+        font-size: 1rem;
+    }
+
+    .timeline__content p {
         font-size: 0.8rem;
     }
 }
