@@ -1,6 +1,6 @@
 .project {
   text-align: center;
-  background: linear-gradient(to bottom, #3e233e, #232020);
+  background: black;
   padding-top: 5%;
   padding: 5rem;
 }
@@ -21,7 +21,7 @@
   padding: 10px 30px;
   cursor: pointer;
   background: none;
-  background-color: #5a2383;
+  background-color: #47c528;
   border: 2px solid #301e5f;
   font-weight: 700;
   color: aliceblue;

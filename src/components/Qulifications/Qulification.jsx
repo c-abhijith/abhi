@@ -1,159 +1,118 @@
-import React, { useState } from 'react'
-import "./Qulification.css"
-export default function Qulification() {
-    const[toggleState,setToggleState]=useState(1)
-    const toggleTab=(index)=>{
+import React, { useState } from 'react';
+import "./Qulification.css";
+
+export default function Qualification() {
+    const [toggleState, setToggleState] = useState(1);
+
+    const toggleTab = (index) => {
         setToggleState(index);
-    }
-  return (
-    <div className="qualification section" id='qualification'>
-        <h2 className="section__title">Qualification</h2>
-        <span className="section__subtitle">My personel journey</span>
-        <div className="qualification__container container">
-            <div className="qualification__tabs">
-                <div className={toggleState===1?
-                    "qualification__button button--flex qualification__active":
-                    "qualification__button button--flex"}
-                    onClick={()=>toggleTab(1)}
+    };
+
+    return (
+        <section className="qualification section" id="qualification">
+            <h2 className="section__title">My Journey</h2>
+
+            <div className="qualification__container">
+                <div className="qualification__tabs">
+                    <button 
+                        className={`tab__button ${toggleState === 1 ? 'active-tab' : ''}`}
+                        onClick={() => toggleTab(1)}
                     >
-                    <i className="uil uil-graduation-cap  qualification__icon"></i>
-                    Education
+                        <i className="uil uil-graduation-cap"></i>
+                        Education
+                    </button>
+
+                    <button 
+                        className={`tab__button ${toggleState === 2 ? 'active-tab' : ''}`}
+                        onClick={() => toggleTab(2)}
+                    >
+                        <i className="uil uil-briefcase-alt"></i>
+                        Experience
+                    </button>
                 </div>
 
-                <div className={toggleState===2?
-                    "qualification__button button--flex qualification__active"
-                    :"qualification__button button--flex"}
-                    onClick={()=>toggleTab(2)}
-                    >
-                    <i className="uil uil-briefcase-alt qualification__icon"></i>
-                    Experience
+                <div className="qualification__sections">
+                    {/* Education Section */}
+                    <div className={`qualification__content ${toggleState === 1 ? 'active-content' : ''}`}>
+                        <div className="steps">
+                            <div className="steps__item">
+                                <div className="steps__content">
+                                    <div className="steps__year">2024 - Present</div>
+                                    <div className="steps__details">
+                                        <h3>MCA</h3>
+                                        <p>JAIN (Kochi)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="steps__item">
+                                <div className="steps__content">
+                                    <div className="steps__year">2017 - 2020</div>
+                                    <div className="steps__details">
+                                        <h3>BCA</h3>
+                                        <p>University of Kerala</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="steps__item">
+                                <div className="steps__content">
+                                    <div className="steps__year">2015 - 2017</div>
+                                    <div className="steps__details">
+                                        <h3>Computer Science</h3>
+                                        <p>KPMHSS</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="steps__item">
+                                <div className="steps__content">
+                                    <div className="steps__year">2015</div>
+                                    <div className="steps__details">
+                                        <h3>SSLC</h3>
+                                        <p>GHS Pooyappally</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Experience Section */}
+                    <div className={`qualification__content ${toggleState === 2 ? 'active-content' : ''}`}>
+                        <div className="steps">
+                            <div className="steps__item">
+                                <div className="steps__content">
+                                    <div className="steps__year">2022 - 2023</div>
+                                    <div className="steps__details">
+                                        <h3>Jr Software Developer</h3>
+                                        <p>Syoft</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="steps__item">
+                                <div className="steps__content">
+                                    <div className="steps__year">2021 - 2022</div>
+                                    <div className="steps__details">
+                                        <h3>Software Developer</h3>
+                                        <p>CYBERIA (TVM)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="steps__item">
+                                <div className="steps__content">
+                                    <div className="steps__year">2020 - 2021</div>
+                                    <div className="steps__details">
+                                        <h3>Intern</h3>
+                                        <p>CYBERIA (TVM)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className="qualification__sections">
-                <div className={toggleState===1?
-                "qualification__content qualification__content-active":
-                    "qualification__content"}>
-                    
-                    <div className="qualification__data">            
-                        <div>
-                            <h3 className="qualification__title">GHS Pooyappally</h3>
-                            <span className="qualification__subtitle">SSLC</span>
-                            <div className="qualification__calender">
-                            <i className="uil uil-calendar-alt"></i>   -2015
-                            </div>
-                            
-                        </div>
-                        <div>
-                            <span className="qualification__rounder"></span>
-                            <span className="qualification__line"></span>
-                        </div>
-                    </div>
-                    <div className="qualification__data">  
-                        <div></div>      
-                        <div>
-                            <span className="qualification__rounder"></span>
-                            <span className="qualification__line"></span>
-                        </div>    
-                        <div>
-                            <h3 className="qualification__title">KPMHSS </h3>
-                            <span className="qualification__subtitle">Computer Science</span>
-                            <div className="qualification__calender">
-                            <i className="uil uil-calendar-alt"></i>2015-2017
-                            </div>
-                            
-                        </div>
-                        
-                    </div>
-                    
-                    <div className="qualification__data">            
-                        <div>
-                            <h3 className="qualification__title">University of Kerala</h3>
-                            <span className="qualification__subtitle">BCA</span>
-                            <div className="qualification__calender">
-                            <i className="uil uil-calendar-alt"></i>2017-2020
-                            </div>
-                            
-                        </div>
-                        <div>
-                            <span className="qualification__rounder"></span>
-                            <span className="qualification__line"></span>
-                        </div>
-                    </div>
-                    <div className="qualification__data">  
-                        <div></div>      
-                        <div>
-                            <span className="qualification__rounder"></span>
-                            <span className="qualification__line"></span>
-                        </div>    
-                        <div>
-                            <h3 className="qualification__title">JAIN(Kochi)</h3>
-                            <span className="qualification__subtitle">MCA</span>
-                            <div className="qualification__calender">
-                            <i className="uil uil-calendar-alt"></i>2024-present
-                            </div>
-                            
-                        </div>
-                        
-                    </div>
-                    
-
-                    
-                    
-                </div>
-                <div className={toggleState===2?
-                "qualification__content qualification__content-active":
-                    "qualification__content"}>
-                        <div className="qualification__data">            
-                        <div>
-                            <h3 className="qualification__title">CYBERIA (TVM)</h3>
-                            <span className="qualification__subtitle">Intern</span>
-                            <div className="qualification__calender">
-                            <i className="uil uil-calendar-alt"></i>2020-2021
-                            </div>
-                            
-                        </div>
-                        <div>
-                            <span className="qualification__rounder"></span>
-                            <span className="qualification__line"></span>
-                        </div>
-                    </div>
-                    <div className="qualification__data">  
-                        <div></div>      
-                        <div>
-                            <span className="qualification__rounder"></span>
-                            <span className="qualification__line"></span>
-                        </div>    
-                        <div>
-                            <h3 className="qualification__title">CYBERIA (TVM)</h3>
-                            <span className="qualification__subtitle">Software developert</span>
-                            <div className="qualification__calender">
-                            <i className="uil uil-calendar-alt"></i>2021-2022
-                            </div>
-                            
-                        </div>
-                        
-                    </div>
-                    <div className="qualification__data">            
-                        <div>
-                            <h3 className="qualification__title">Syoft</h3>
-                            <span className="qualification__subtitle">Jr software developert</span>
-                            <div className="qualification__calender">
-                            <i className="uil uil-calendar-alt"></i>2022-2023
-                            </div>
-                            
-                        </div>
-                        <div>
-                            <span className="qualification__rounder"></span>
-                            <span className="qualification__line"></span>
-                        </div>
-                    </div>
-                    
-
-                    
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-  )
+        </section>
+    );
 }

@@ -16,7 +16,7 @@ function App() {
       <main className='main'>
         <Home/>
         <About/>
-        <Skills/>
+        {/* <Skills/> */}
         <Project/>
         <Qulification/>
         <Certificates/>

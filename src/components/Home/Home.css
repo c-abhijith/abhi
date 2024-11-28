@@ -55,7 +55,7 @@
 
 .home_section__text__p1 {
   text-align: center;
-  color: rgb(238, 94, 16);
+  color: rgb(74, 217, 12);
 }
 
 .home {
@@ -65,7 +65,7 @@
   justify-content: center;
   gap: 5rem;
   height: 100%;
-  background: linear-gradient(to bottom, #000000, #060606);
+  background: black;
   opacity: 0;
   animation: slideIn 1s forwards;
 }
