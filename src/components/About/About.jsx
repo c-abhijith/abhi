@@ -3,54 +3,67 @@ import './About.css';
 
 export default function About() {
     const sphereRef = useRef(null);
+    let tagCloudInstance = null; // Store the TagCloud instance
 
     useEffect(() => {
-        const loadTagCloud = async () => {
-            const TagCloud = (await import('TagCloud')).default;
-            
-            const container = '.tagcloud';
-            const texts = [
-                'Python', 'Django', 'JavaScript',
-                'FastAPI', 'Flask', 'gRPC',
-                'PostgreSQL', 'AWS', 'MongoDB',
-                'GitHub', 'React', 'Docker',
-                'REST API', 'GraphQL', 'MySQL',
-                'Linux', 'Redis', 'Celery'
-            ];
-
-            const options = {
-                radius: 230,
-                maxSpeed: 'normal',
-                initSpeed: 'fast',
-                direction: 135,
-                keep: true,
-                useContainerInlineStyles: true,
-                useItemInlineStyles: true
-            };
-
+        const initTagCloud = async () => {
             try {
-                if (sphereRef.current) {
-                    TagCloud(container, texts, options);
+                const TagCloud = (await import('TagCloud')).default;
+                
+                const container = '.tagcloud';
+                const texts = [
+                    'Python', 'Django', 'JavaScript',
+                    'FastAPI', 'Flask', 'gRPC',
+                    'PostgreSQL', 'AWS', 'MongoDB',
+                    'GitHub', 'React', 'Docker',
+                    'REST API', 'GraphQL', 'MySQL',
+                    'Linux', 'Redis', 'Celery'
+                ];
+
+                const options = {
+                    radius: 230,
+                    maxSpeed: 'slow',
+                    initSpeed: 'slow',
+                    direction: 135,
+                    keep: true
+                };
+
+                // Clear previous instance if exists
+                if (tagCloudInstance) {
+                    tagCloudInstance.destroy();
                 }
+
+                // Clear container
+                if (sphereRef.current) {
+                    sphereRef.current.innerHTML = '';
+                }
+
+                // Create new instance
+                tagCloudInstance = TagCloud(container, texts, options);
+
             } catch (error) {
                 console.error("Error initializing TagCloud:", error);
             }
         };
 
-        loadTagCloud();
+        initTagCloud();
 
+        // Cleanup function
         return () => {
-            const element = document.querySelector('.tagcloud');
-            if (element) {
-                element.innerHTML = '';
+            if (tagCloudInstance) {
+                tagCloudInstance.destroy();
+            }
+            if (sphereRef.current) {
+                sphereRef.current.innerHTML = '';
             }
         };
-    }, []);
+    }, []); // Empty dependency array to run only once
 
     return (
         <section className="about">
-            <h2 className="section__title">Projects</h2>
-            <span className="section__subtitle">My personal projects</span>
+            <h2 className="section__title">About Me</h2>
+            <span className="section__subtitle">Introduction</span>
+            
             <div className="about__container">
                 {/* Left side - Letter */}
                 <div className="letter-container">
