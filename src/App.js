@@ -21,7 +21,7 @@ function App() {
         <Project/>
         <Qulification/>
         <Certificates/>
-        {/* <Contact/> */}
+        <Contact/>
         <Footer/>
       </main>
       <ScrollUp/>
