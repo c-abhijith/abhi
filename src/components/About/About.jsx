@@ -27,13 +27,20 @@ export default function About() {
                     return 230;
                 };
 
+                const speedMapping = {
+                    'slow': 1,
+                    'medium': 5,
+                    'fast': 20
+                };
+                
                 const options = {
                     radius: getRadius(),
-                    maxSpeed: 'slow',
-                    initSpeed: 'slow',
+                    maxSpeed: speedMapping['fast'],   // 10 (numerical equivalent of 'fast')
+                    initSpeed: speedMapping['medium'],// 5 (numerical equivalent of 'medium')
                     direction: 135,
                     keep: true
                 };
+                
 
                 if (cloudInstanceRef.current) {
                     try {
