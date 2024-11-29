@@ -1,5 +1,5 @@
 .contact{
-    background: linear-gradient(to bottom, #242323, #1a1a33);
+    background: black;
     padding-top: 2rem;
 }
 .con1{
@@ -37,7 +37,7 @@
 
 .contact__card{
     background-color:linear-gradient(to bottom, #ea1313, #a50f0f);
-    border: 1px solid rgb(130, 37, 237);
+    border: 1px solid rgb(96, 188, 40);
     padding: 1rem;
     border-radius: 1rem;
     text-align: center;
@@ -97,7 +97,7 @@
     left: 0;
     width: 150%;
     height: 100%;
-    border: 2px solid rgba(160, 24, 223, 0.3);
+    border: 2px solid rgba(49, 180, 29, 0.3);
     background: none;
     color: var(--text-color);
     outline: none;
