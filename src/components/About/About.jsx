@@ -3,13 +3,12 @@ import './About.css';
 
 export default function About() {
     const sphereRef = useRef(null);
-    const tagCloudRef = useRef(null); // Store TagCloud instance in a ref
+    const cloudInstanceRef = useRef(null);
 
     useEffect(() => {
         const initTagCloud = async () => {
             try {
                 const TagCloud = (await import('TagCloud')).default;
-                const currentSphereRef = sphereRef.current; // Store ref value
                 
                 const texts = [
                     'Python', 'Django', 'JavaScript',
@@ -20,46 +19,77 @@ export default function About() {
                     'Linux', 'Redis', 'Celery'
                 ];
 
+                const getRadius = () => {
+                    const width = window.innerWidth;
+                    if (width <= 340) return 90;
+                    if (width <= 465) return 150;
+                    if (width <= 768) return 180;
+                    return 230;
+                };
+
                 const options = {
-                    radius: 230,
+                    radius: getRadius(),
                     maxSpeed: 'slow',
                     initSpeed: 'slow',
                     direction: 135,
                     keep: true
                 };
 
-                // Cleanup previous instance
-                if (tagCloudRef.current) {
-                    tagCloudRef.current.destroy();
+                if (cloudInstanceRef.current) {
+                    try {
+                        cloudInstanceRef.current.destroy();
+                    } catch (error) {
+                        console.log('Previous instance cleanup skipped');
+                    }
                 }
 
-                // Clear container
-                if (currentSphereRef) {
-                    currentSphereRef.innerHTML = '';
+                if (sphereRef.current) {
+                    sphereRef.current.innerHTML = '';
                 }
 
-                // Create new instance
-                tagCloudRef.current = TagCloud('.tagcloud', texts, options);
+                cloudInstanceRef.current = TagCloud('.tagcloud', texts, options);
 
+                let resizeTimeout;
+                const handleResize = () => {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(() => {
+                        const newRadius = getRadius();
+                        
+                        if (cloudInstanceRef.current) {
+                            try {
+                                cloudInstanceRef.current.destroy();
+                                cloudInstanceRef.current = TagCloud('.tagcloud', texts, {
+                                    ...options,
+                                    radius: newRadius
+                                });
+                            } catch (error) {
+                                console.log('Resize handling skipped');
+                            }
+                        }
+                    }, 150);
+                };
+
+                window.addEventListener('resize', handleResize);
+
+                return () => {
+                    window.removeEventListener('resize', handleResize);
+                    clearTimeout(resizeTimeout);
+                    if (cloudInstanceRef.current) {
+                        try {
+                            cloudInstanceRef.current.destroy();
+                            cloudInstanceRef.current = null;
+                        } catch (error) {
+                            console.log('Final cleanup skipped');
+                        }
+                    }
+                };
             } catch (error) {
                 console.error("Error initializing TagCloud:", error);
             }
         };
 
         initTagCloud();
-
-        // Cleanup function
-        return () => {
-            if (tagCloudRef.current) {
-                tagCloudRef.current.destroy();
-            }
-            // Use stored ref value in cleanup
-            const currentSphereRef = sphereRef.current;
-            if (currentSphereRef) {
-                currentSphereRef.innerHTML = '';
-            }
-        };
-    }, []); // Empty dependency array
+    }, []);
 
     return (
         <section className="about">
@@ -67,7 +97,6 @@ export default function About() {
             <span className="section__subtitle">Introduction</span>
             
             <div className="about__container">
-                {/* Left side - Letter */}
                 <div className="letter-container">
                     <div className="letter">
                         <p className="letter__greeting">Dear Visitor,</p>
@@ -99,7 +128,6 @@ export default function About() {
                     </div>
                 </div>
 
-                {/* Right side - Sphere */}
                 <div className="sphere-container">
                     <span ref={sphereRef} className="tagcloud"></span>
                 </div>

@@ -29,7 +29,7 @@
 }
 
 .nav__toggle {
-    color: rgb(227, 115, 3);
+    color: rgb(65, 214, 36);
     font-weight: var(--font-medium);
     cursor: pointer;
     transition: color 0.3s ease;
