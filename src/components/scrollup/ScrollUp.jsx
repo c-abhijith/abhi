@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ScrollUp.css';
+import resumePDF from '../../assets/Abhijith_Resume.pdf';
 
 const ScrollUp = () => {
     const [showElements, setShowElements] = useState(true);
@@ -11,10 +12,7 @@ const ScrollUp = () => {
             const homeSectionBottom = homeSection?.offsetTop + homeSection?.offsetHeight;
             const currentScroll = window.scrollY;
 
-            // Show elements only in home section
             setShowElements(currentScroll < homeSectionBottom || currentScroll === 0);
-            
-            // Show scroll-up arrow when scrolled down
             setShowScrollUp(currentScroll >= 560);
         };
 
@@ -23,18 +21,23 @@ const ScrollUp = () => {
     }, []);
 
     const handleResumeClick = () => {
-        const resumeUrl = '/resume.pdf';
-        window.open(resumeUrl, '_blank');
+        const link = document.createElement('a');
+        link.href = resumePDF;
+        link.download = 'Abhijith_Resume.pdf';
+        link.target = '_blank';
+        
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
 
     return (
         <>
-            {/* Resume and Social Links - Only show in home section */}
             {showElements && (
                 <>
                     <div className="resume-container">
                         <button onClick={handleResumeClick} className="resume-link">
-                            Resume
+                            Resume 
                         </button>
                     </div>
 
@@ -69,7 +72,6 @@ const ScrollUp = () => {
                 </>
             )}
 
-            {/* Scroll Up Arrow */}
             {showScrollUp && (
                 <a href="#home" className="scrollup">
                     <i className="uil uil-arrow-up scrollup__icon"></i>

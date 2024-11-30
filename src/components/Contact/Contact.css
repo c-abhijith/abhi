@@ -178,10 +178,7 @@
     .contact__card {
         flex:0 0;
     }
-    .contact{
-        padding-top: 0rem;
-        padding-bottom: 15%;
-    }
+    
     .contact__info {
         display: flex;
     }

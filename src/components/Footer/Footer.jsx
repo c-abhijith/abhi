@@ -6,15 +6,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer__container">
                 <div className="footer__content">
-                    <div className="footer__info">
-                        <h3 className="footer__title">Abhijith C</h3>
-                        <p className="footer__description">
-                            Full Stack Developer
-                        </p>
-                    </div>
-
                     <div className="footer__social">
-                        <h3 className="footer__subtitle">Social</h3>
                         <div className="footer__social-links">
                             <a 
                                 href="https://github.com/c-abhijith" 
@@ -39,24 +31,6 @@ const Footer = () => {
                                 <i className="uil uil-envelope"></i>
                             </a>
                         </div>
-                    </div>
-
-                    <div className="footer__links">
-                        <h3 className="footer__subtitle">Quick Links</h3>
-                        <ul className="footer__list">
-                            <li>
-                                <a href="#home" className="footer__link">Home</a>
-                            </li>
-                            <li>
-                                <a href="#about" className="footer__link">About</a>
-                            </li>
-                            <li>
-                                <a href="#project" className="footer__link">Projects</a>
-                            </li>
-                            <li>
-                                <a href="#certificates" className="footer__link">Certificates</a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
 
