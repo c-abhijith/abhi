@@ -17,6 +17,7 @@
     align-items: flex-start;
     justify-content: center;
     min-height: 100vh;
+    padding: 20% 0% 0% 0%;
 }
 
 .home__data {
@@ -51,12 +52,13 @@
 }
 
 .home__subtitle {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #fff;
+    color: white;
 }
 
 .home__description {
+    font-size: 15px;
     margin-bottom: 2rem;
     max-width: 460px;
     color: #888;
@@ -65,20 +67,22 @@
 .button {
     display: inline-block;
     padding: 0.7rem 1.5rem; /* Adjusted padding */
-    border: 2px solid #fff; /* White border */
+    border: 2px solid #25902b; /* White border */
     background: transparent; /* Transparent button */
-    color: #fff; /* White text */
+    color: #25902b; /* White text */
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
     transition: all 0.3s ease;
+   
 }
 
 .button:hover {
-    background: #4caf50; /* Green background on hover */
-    color: #fff;         /* White text */
+    background: #1eee25; /* Green background on hover */
+    color: #0d0c0c;         /* White text */
     cursor: pointer;
+    border:black;
 }
 
 /* Responsive */
@@ -90,6 +94,11 @@
     .home__title {
         font-size: 4rem;
     }
+    .home__subtitle {
+        font-size: 1.3rem;
+       
+    }
+    
 
     .button {
         font-size: 0.9rem;
@@ -101,17 +110,30 @@
     .home__container {
         padding-left: 1.5rem;
     }
+    .home__data {
+        padding-bottom: 16%;
+    }
 
     .home__greeting {
         font-size: 0.7rem;
     }
 
     .home__title {
-        font-size: 3.5rem;
+        font-size: 2.2rem;
+    }
+    .home__subtitle {
+        font-size: 0.9rem;
+        
+       
+    }
+    .home__description {
+        font-size: 10px;
+       
     }
 
     .button {
         padding: 0.5rem 1rem;
+        margin-top: 10%;
     }
 }
 
@@ -121,11 +143,19 @@
     }
 
     .home__greeting {
-        font-size: 0.6rem;
+        font-size: 0.2rem;
     }
 
     .home__title {
-        font-size: 3rem;
+        font-size: 2.3rem;
+    }
+    .home__subtitle {
+        font-size: 0.8rem;
+       
+    }
+    .home__description {
+        font-size: 10px;
+        
     }
 
     .button {
@@ -133,3 +163,21 @@
         padding: 0.4rem 0.8rem;
     }
 }
+.home__description {
+    margin-bottom: 2rem;
+    max-width: 460px;
+    color: #888;
+  }
+  
+  @media screen and (max-width: 450px) {
+    .home__description {
+      font-size: 0.6rem; /* Slightly smaller font size */
+      line-height: 1.5; /* Increase line spacing */
+      width: 80%; /* Restrict width to 80% */
+      word-wrap: break-word; /* Break long words */
+      margin: 0; /* Remove any unnecessary margins */
+      padding: 0 10px; /* Add padding on the sides */
+      text-align: left; /* Align text to the left */
+    }
+  }
+  

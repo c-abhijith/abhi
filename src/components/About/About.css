@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
-    --first-color: rgb(65, 214, 36);
+    --first-color: 15a71c;
     --text-color-light: #b3b3b3;
     --body-color: #101010;
 }
@@ -10,7 +10,6 @@
 /* General Styles */
 .about {
     min-height: 100vh;
-    padding: 6rem 1rem;
     background: black;
     color: #fff;
 }
@@ -279,7 +278,7 @@
 }
 
 .letter__greeting {
-    color: rgb(65, 214, 36);
+    color: rgb(209, 222, 207);
     font-size: 1rem;
     margin-bottom: 2rem;
 }

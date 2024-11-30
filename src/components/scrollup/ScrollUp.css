@@ -34,7 +34,7 @@
 .resume-link {
     position: fixed;
     top: 2rem;
-    right: 2.5rem;
+    right: -1.5rem;
     color: #ffffff;
     font-size: 2rem;
     font-weight: 600;
@@ -50,7 +50,6 @@
     position: relative;
 }
 
-/* Underline effect */
 .resume-link::after {
     content: '';
     position: absolute;
@@ -58,17 +57,17 @@
     left: 0;
     width: 0;
     height: 3px;
-    background-color: #4caf50;  /* Green color */
+    background-color: #4caf50;  
     transition: width 0.3s ease;
 }
 
 .resume-link:hover {
-    color: #ffffff;  /* Stay white on hover */
+    color: #ffffff;  
     transform: translateY(-3px);
 }
 
 .resume-link:hover::after {
-    width: 100%;  /* Full width on hover */
+    width: 100%;  
 }
 
 /* Social Links Styles */
@@ -276,7 +275,7 @@
     .resume-link {
         font-size: 1.5rem;
         letter-spacing: 2px;
-        right: 1.5rem;
+        right: -2.0rem;
     }
 
     .social-links-container {
@@ -305,7 +304,7 @@
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 550px) {
     .resume-container {
         right: 1rem;
     }
@@ -313,7 +312,7 @@
     .resume-link {
         font-size: 1.3rem;
         letter-spacing: 1px;
-        right: 1rem;
+        right: -1rem;
     }
 
     .social-links-container {
