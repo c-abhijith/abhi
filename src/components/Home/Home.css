@@ -65,7 +65,7 @@
 .buttons {
     display: inline-block;
     background-color: rgb(74, 217, 12);
-    color: black;
+    color: rgb(46, 44, 44);
     padding: 1.25rem 2rem;
     border-radius: 1rem;
     font-weight: var(--font-medium);
