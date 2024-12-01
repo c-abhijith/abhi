@@ -63,7 +63,7 @@ export default function Data() {
             </div>
             
             <h3 className='home__subtitle'>
-                Full Stack Developer
+                Backend Developer
             </h3>
             
             <p className='home__description'>
