@@ -18,7 +18,7 @@ const projectsData = [
         "description": "This is a Flask template project that integrates PostgreSQL for backend operations, with dynamic image rendering of a 'draw' image. It uses Flask templates to serve content efficiently while managing user data through a PostgreSQL database.",
         "category": ["Python","Web"],
         "image": `${process.env.PUBLIC_URL}/assets/draw.png`,
-        "git": "https://github.com/c-abhijith/Galary.git",
+        "git": "https://github.com/c-abhijith/Draw.git",
         "web": "https://draw-git-main-abhis-projects-a823021e.vercel.app/",
         "video":""
     }, 
@@ -41,7 +41,7 @@ const projectsData = [
         "description": "In my latest e-commerce project, I created a platform with Admin and User roles, secure OTP validation, and reporting in Excel and PDF formats. The system also integrates PayPal for seamless transactions, demonstrating my ability to deliver complex, user-centric solutions with robust security and reporting features.",
         "category": ["Python"],
         "image": `${process.env.PUBLIC_URL}/assets/ogle.png`,        
-        "git": "https://github.com/c-abhijith/OGLE.git",
+        "git": "https://github.com/c-abhijith/OgleHosting.git",
         "web": "https://youtu.be/Q1fKqazATtc?si=Xnjk9hE0LGP9P_SE"
     },
     {
@@ -51,7 +51,7 @@ const projectsData = [
         "description": "In my waste management project, I built a platform with React and Django REST Framework (DRF), featuring JWT authentication, interactive React maps, and payment options via PayPal and Razorpay. This project showcases my skills in integrating modern technologies for improved functionality and user experience.",
         "category": ["JS", "Python"],
         "image": `${process.env.PUBLIC_URL}/assets/zwast.png`, 
-        "git": "https://github.com/c-abhijith/zwaste-backend-.git",
+        "git": "https://github.com/c-abhijith/Zwaste-BackEnd.git",
         "web": "https://youtu.be/ndbB3nIJwH8?si=KE_164j6IO_J7u-C"
     }
   ]
