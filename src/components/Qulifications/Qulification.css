@@ -20,7 +20,7 @@
     border: none;
     font-size: 1.1rem;
     cursor: pointer;
-    color: #666;
+    color: #f8f8f8;
     padding: 0.5rem 1rem;
     transition: all 0.3s ease;
     display: flex;
@@ -105,7 +105,7 @@
 .timeline__content h3 {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: #f1ecec;
 }
 
 .timeline__content p {
@@ -115,7 +115,7 @@
 
 /* Hover Effects */
 .timeline__content:hover {
-    transform: translateY(-5px);
+    transform: translateY(5px);
     background: rgba(76, 175, 80, 0.05);
     box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
 }

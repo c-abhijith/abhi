@@ -11,6 +11,7 @@ export default function Qualification() {
     return (
         <section className="qualification section" id="qualification">
             <h2 className="section__title">Journey</h2>
+            <span className="section__subtitle">Advancement in Tech</span>
 
             <div className="qualification__container">
                 <div className="qualification__tabs">

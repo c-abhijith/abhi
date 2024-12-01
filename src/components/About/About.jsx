@@ -11,12 +11,10 @@ export default function About() {
                 const TagCloud = (await import('TagCloud')).default;
                 
                 const texts = [
-                    'Python', 'Django', 'JavaScript',
-                    'FastAPI', 'Flask', 'gRPC',
-                    'PostgreSQL', 'AWS', 'MongoDB',
-                    'GitHub', 'React', 'Docker',
-                    'REST API', 'GraphQL', 'MySQL',
-                    'Linux', 'Redis', 'Celery'
+                    'Python', 'Django','FastAPI', 'Flask',
+                    'gRPC','PostgreSQL','MySQL','MongoDB',
+                    'GitHub', 'AWS','REST API',
+                    'Redis', 'Celery','RabbitMQ'
                 ];
 
                 const getRadius = () => {
@@ -35,8 +33,8 @@ export default function About() {
                 
                 const options = {
                     radius: getRadius(),
-                    maxSpeed: speedMapping['fast'],   // 10 (numerical equivalent of 'fast')
-                    initSpeed: speedMapping['medium'],// 5 (numerical equivalent of 'medium')
+                    maxSpeed: speedMapping['fast'],   
+                    initSpeed: speedMapping['medium'],
                     direction: 135,
                     keep: true
                 };
@@ -109,17 +107,16 @@ export default function About() {
                         <p className="letter__greeting">Dear Visitor,</p>
                         
                         <p className="letter__content">
-                            I'm Abhijith, a passionate software developer with a focus on 
-                            creating innovative solutions. My journey in technology began 
-                            with curiosity and has evolved into expertise in modern development 
-                            practices.
+                        I'm Abhijith, a passionate software developer with a focus on 
+                        creating innovative solutions.My journey in technology began with 
+                        curiosity and has evolved into expertise in modern development practices.
                         </p>
                         
                         <p className="letter__content">
-                            With 4 years of experience, I've specialized in building scalable 
-                            applications using <strong>Python</strong>, <strong>Django</strong>, 
-                            and <strong>FastAPI</strong>. My work involves creating efficient 
-                            backend solutions and microservices architecture that make a real impact.
+                        With  <strong> 2.8 years </strong> of experience, I've specialized in building scalable and efficient 
+                        backend solutions. My work involves a deep understanding of  <strong>microservices, 
+                        monolithic architectures, WebSocket communication, and pub-sub systems,</strong>
+                        enabling impactful software development.
                         </p>
                         
                         <p className="letter__content">

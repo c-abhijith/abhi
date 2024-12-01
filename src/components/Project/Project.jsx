@@ -20,6 +20,7 @@ export const Project = () => {
     return (
         <section className="project section" id="project">
             <h2 className="section__title">Projects</h2>
+            <span className="section__subtitle">Knowledge, Growth, Innovation</span>
 
             <div className="project__filters">
                 {['All', 'Web', 'Python', 'JS'].map((category) => (
