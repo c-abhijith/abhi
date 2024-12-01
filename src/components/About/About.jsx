@@ -114,8 +114,8 @@ export default function About() {
                         
                         <p className="letter__content">
                         With  <strong> 2.8 years </strong> of experience, I've specialized in building scalable and efficient 
-                        backend solutions. My work involves a deep understanding of  <strong>microservices, 
-                        monolithic architectures, WebSocket communication, and pub-sub systems,</strong>
+                        backend solutions. My work involves a deep understanding of  <strong>microservices</strong>, 
+                        <strong>monolithic</strong> architectures,  <strong>WebSocket </strong> communication, and pub-sub systems,
                         enabling impactful software development.
                         </p>
                         
