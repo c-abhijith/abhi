@@ -44,7 +44,7 @@ const ScrollUp = () => {
                     <div className="social-links-container">
                         <div className="social-links">
                             <a
-                                href="https://www.linkedin.com/in/your-profile"
+                                href="https://www.linkedin.com/in/cabhijithofficial/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="social-icon-link"
@@ -52,7 +52,7 @@ const ScrollUp = () => {
                                 <i className="uil uil-linkedin-alt"></i>
                             </a>
                             <a
-                                href="https://github.com/your-profile"
+                                href="https://github.com/c-abhijith"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="social-icon-link"
@@ -60,7 +60,7 @@ const ScrollUp = () => {
                                 <i className="uil uil-github"></i>
                             </a>
                             <a
-                                href="https://leetcode.com/your-profile"
+                                href="https://leetcode.com/u/cabhijithofficial/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="social-icon-link"

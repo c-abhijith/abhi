@@ -17,7 +17,7 @@ const Footer = () => {
                                 <i className="uil uil-github"></i>
                             </a>
                             <a 
-                                href="https://www.linkedin.com/in/abhijith-c-8602b7220/" 
+                                href="https://www.linkedin.com/in/cabhijithofficial/" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="footer__social-link"
@@ -25,7 +25,7 @@ const Footer = () => {
                                 <i className="uil uil-linkedin"></i>
                             </a>
                             <a 
-                                href="mailto:abhijithc2000@gmail.com" 
+                                href="mailto:cabhijithofficial@gmail.com" 
                                 className="footer__social-link"
                             >
                                 <i className="uil uil-envelope"></i>
