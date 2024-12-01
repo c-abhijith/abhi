@@ -9,19 +9,28 @@ import { Project } from './components/Project/Project';
 import Qulification from './components/Qulifications/Qulification';
 import Skills from './components/Skills/Skills';
 import ScrollUp from './components/scrollup/ScrollUp';
+import ScrollAnimation from './components/ScrollAnimation';
 
 function App() {
   return (
     <div className="App">
-      {/* <Header/> */}
       <main className='main'>
         <Home/>
-        <About/>
-        {/* <Skills/> */}
-        <Project/>
-        <Qulification/>
-        <Certificates/>
-        <Contact/>
+        <ScrollAnimation>
+          <About/>
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <Project/>
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <Qulification/>
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <Certificates/>
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <Contact/>
+        </ScrollAnimation>
         <Footer/>
       </main>
       <ScrollUp/>

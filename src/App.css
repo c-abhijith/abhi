@@ -168,3 +168,99 @@ img{
   display: inline-flex;
   align-items: center;
 }
+
+/* Scroll Animations */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.scroll-animation.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Different animations for alternate sections */
+.scroll-animation:nth-child(odd) {
+    transform: translateX(-50px);
+}
+
+.scroll-animation:nth-child(even) {
+    transform: translateX(50px);
+}
+
+.scroll-animation.animate:nth-child(odd),
+.scroll-animation.animate:nth-child(even) {
+    transform: translateX(0);
+}
+
+/* Animation variations */
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Optional: Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-animation {
+        transition: none;
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
