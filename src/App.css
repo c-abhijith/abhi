@@ -64,11 +64,27 @@
 }
 
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    overflow-x: hidden;  /* Prevent horizontal scroll */
+    width: 100%;
+    max-width: 100vw;
+}
+
+.App {
+    overflow-x: hidden;  /* Prevent horizontal scroll */
+    width: 100%;
+    position: relative;
+}
+
+.main {
+    overflow-x: hidden;  /* Prevent horizontal scroll */
+    width: 100%;
 }
 
 html{

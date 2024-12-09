@@ -4,11 +4,14 @@
     background: black;
     display: flex;
     align-items: center;
+    width: 100%;
+    overflow: hidden;
 }
 
 .home__container {
     width: 100%;
-    padding-left:10rem;
+    padding-left: 10rem;
+    max-width: 100%;
 }
 
 .home__content {
@@ -108,7 +111,8 @@
 
 @media screen and (max-width: 768px) {
     .home__container {
-        padding-left: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     .home__data {
         padding-bottom: 16%;
@@ -140,6 +144,7 @@
 @media screen and (max-width: 350px) {
     .home__container {
         padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .home__greeting {
